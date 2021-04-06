@@ -1,0 +1,321 @@
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(descarga.png);
+   display: flex;
+   flex-direction: column;
+   
+}
+
+header{
+   background:rgb(20, 90, 50 );
+   width: 100%;
+   max-width: 1000px;
+   margin: auto;
+   padding: 20px;
+   /*flex*/
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   flex-direction: row;
+   /* flex box**/
+   display: flex;
+   flex: auto;
+}
+header .cont-logo a {
+   color:rgb(195, 37, 32);
+   font-synthesis: 20px;
+}
+
+header .menu {
+   width: 50%;
+   background:orangered;
+   /*flex*/
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+
+}
+
+header .menu ul {
+   background: rgb(31, 97, 141 ); 
+   color: #fff;
+   text-align: center;
+   padding: 10px;
+    /*flex*/
+   flex-grow: 1;
+
+}
+
+header .menu ul li {
+   background: rgb(31, 97, 141 );  
+   color: #fff;
+   text-align: center;
+    /*flex*/
+   flex-grow: 1;
+
+}
+
+header .menu ul li a {
+   background: rgb(31, 97, 141 ); 
+   color: rgb(23, 32, 42 );
+   text-align:center;
+    /*flex*/
+   flex-grow: 1;
+}
+
+header .menu ul li a:hover{
+   color:rgb(20, 90, 50);
+   transition: all .3s;
+}
+
+main {
+   
+   background:rgb(171, 235, 198);
+   width: 100%;
+   max-width: 1000px;
+   margin: auto;
+   /* flex box**/
+   display: flex;
+   flex: auto;
+   flex-wrap: wrap;
+   flex-direction: row;
+}
+
+article{
+   margin-bottom: 20px;
+   padding-bottom: 20px;
+   /*flex*/
+   flex: 2;
+   overflow-y: auto;
+}
+
+aside{
+   background: rgb(20, 90, 50);
+   /*flex*/
+   flex: 1;
+   overflow-y: auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   flex-direction: column;
+}
+
+aside .widget {
+   margin-bottom: 5px;
+   padding: 5px;
+   background: rgb(20, 90, 50);
+   border-radius: 5px;
+   align-content: center;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+}
+
+footer{    
+   background: rgb(20, 90, 50);
+   width: 100%;
+   max-width: 1000px;
+   margin: auto;
+   /*flex*/
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   /* flex box**/
+   display: flex;
+   flex: auto;
+}
+
+.tweets{
+   /*flex*/
+   display: flex;
+   justify-content: flex-start;
+   flex-direction: row;
+   flex-wrap: wrap;
+
+}
+article .tweet{
+   width:50%;
+   padding: 10px;
+   /*flex*/
+   display: flex;
+   flex-grow: 1;
+}
+
+article .photo{
+   width:50%;
+   padding: 10px;
+   margin-bottom: 20px;
+   height: 210px;
+   /*flex*/
+   display: flex;
+   flex-grow: 1;
+}
+
+h1{
+   width: 100%;
+   align-content: center;
+   text-align: center;
+  
+}
+
+.modal{
+   position: fixed;
+   top: -100vh;
+   left: 0;
+   z-index: 99999999;
+   background: rgba(173, 16, 16, 0.75);
+   width: 100vw;
+   height: 100vh;
+   opacity: 0;
+   transition: opacity 0.35s ease;
+}
+
+.modal .content-modal{
+   width: 100%;
+   max-width: 680px;
+   max-height: 400px;
+   position: fixed;
+   left: 40%;
+   top: -100vh;
+   transition: top 0.35s ease;
+   margin-left: -250px;
+   background:  rgb(3, 37, 3);
+   box-shadow: 0 1px rgba(0, 0, 0, 0.1);
+   z-index: 9999999;
+
+}
+.modal h2{
+   padding: 0.5em;
+   text-align: center;
+   color: #444444;
+   margin: 0;
+}
+
+.modal article{
+   /*height: 300px;*/
+   padding: 0;
+   margin: 0;
+
+}
+
+.close-modal{
+   color: #ff0000;
+   position: absolute;
+   top: 0.2em;
+   right: 0.375em;
+   margin: 0;
+   padding: 5px;
+   font-weight: bold;
+   font-size: 1.5em;
+   text-decoration: none;
+}
+
+.content-modal header{
+   align-items: center;
+   padding: 0;
+   height: 50px;
+
+}
+
+.modal a:hover{
+   color: #c0392b;
+}
+
+
+.modal:target{
+   opacity: 1;
+   top:0;
+}
+
+.modal .btn-close-modal{
+   position: absolute;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 99999991;
+}
+
+.modal:target .content-modal{
+   top:50px;
+   transition: top 0.35s ease;
+}
+
+.contactme{
+   background: rgb(255, 255, 255);
+   width: 100%;
+   margin: auto;
+   /* flex box**/
+    align-items: center;
+   display: flex;
+   flex: auto;
+   flex-direction: column;
+
+}
+.social{
+   max-width: 150px;
+   /*flex*/
+   align-content: center;
+   flex-wrap: wrap;
+   flex-direction: row;
+   /* flex box**/
+   display: flex;
+   flex: auto;
+   justify-content: space-between;
+}
+
+@media screen and (max-width:800px){
+   header{
+       flex-direction: column;
+       padding: 0;
+
+   }
+   header .menu {
+       width: 366px;
+       /*flex*/
+   }
+   article .tweet{
+       width: 100%;
+   }
+   article .photo{
+       width: auto;
+       height: auto;
+   }
+   .tweets{
+       flex-direction: column;
+   }
+   .modal .content-modal{
+       width: 90%;
+       max-width: none;
+       left: 5%;
+       margin-left: 0;
+   }
+
+   .video{
+       width: 100%;
+   }
+   
+}
+
+@media screen and (max-width:600px){
+   iframe{
+       width: 400px;
+   }
+   footer p{
+
+       margin-bottom: 0px;
+   }
+}
+
+
+
+
+    
+    
+ 
